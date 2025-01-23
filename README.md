@@ -57,7 +57,18 @@ docker-compose up -d
 docker-compose exec api rails db:create db:migrate db:seed
 ```
 
-El servidor estará disponible en `http://localhost:3000`
+El servidor estará disponible en [http://localhost:3000](http://localhost:3000)
+
+## 📚 Documentación API
+
+La documentación completa de la API está disponible en [http://localhost:3000/api-docs/index.html](http://localhost:3000/api-docs/index.html?cors=true) una vez que el servidor esté en funcionamiento.
+
+Esta documentación incluye:
+- Todos los endpoints disponibles
+- Esquemas de request/response
+- Ejemplos de uso
+- Modelos de datos
+
 ## 💾 Configuración de Base de Datos
 
 ### Configuración Local
@@ -151,8 +162,6 @@ config/
 - `GET /carts/:id` - Obtener carrito
 - `POST /cart_items` - Añadir item al carrito
 - `PATCH /cart_items/:id` - Actualizar item del carrito
-
-Consulta la documentación completa de la API en `/api-docs`
 
 ## 🧪 Testing
 
@@ -273,6 +282,3 @@ Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más det
 ## 🔍 Soporte
 
 Para soporte, enviar un email a [amogollonr@unal.edu.co]
-
-
-
