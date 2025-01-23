@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Factorialhr Shop API
 
 Una API RESTful para una tienda en línea de productos personalizables, inicialmente enfocada en bicicletas pero diseñada para escalar a otros artículos deportivos.
@@ -39,18 +38,68 @@ cd factorial-shop-api
 ```bash
 cp .env.example .env
 ```
+3. Instalar las dependencias:
+```bash
+# Si estás usando el contenedor
+docker-compose exec api bundle install
 
-3. Construir y levantar los contenedores:
+# Si estás en desarrollo local
+bundle install
+```
+
+4. Construir y levantar los contenedores:
 ```bash
 docker-compose up -d
 ```
 
-4. Crear y configurar la base de datos:
+5. Crear y configurar la base de datos:
 ```bash
 docker-compose exec api rails db:create db:migrate db:seed
 ```
 
 El servidor estará disponible en `http://localhost:3000`
+## 💾 Configuración de Base de Datos
+
+### Configuración Local
+
+1. Copiar el archivo de configuración de ejemplo:
+```bash
+cp config/database.yml.example config/database.yml
+```
+
+2. Configurar las variables de entorno en tu `.env`:
+```bash
+DB_USERNAME=factorial_shop
+DB_PASSWORD=password
+DB_HOST=db  # Usa 'localhost' si no estás usando Docker
+```
+
+### Usando Docker
+
+Si usas Docker, la configuración está lista para funcionar con las siguientes variables en `docker-compose.yml`:
+
+```yaml
+POSTGRES_USER: factorial_shop
+POSTGRES_PASSWORD: password
+POSTGRES_DB: factorial_shop_development
+```
+
+### Variables de Entorno Disponibles
+
+| Variable | Descripción | Valor por Defecto |
+|----------|-------------|-------------------|
+| DB_USERNAME | Usuario de la base de datos | factorial_shop |
+| DB_PASSWORD | Contraseña de la base de datos | password |
+| DB_HOST | Host de la base de datos | db |
+| RAILS_MAX_THREADS | Número máximo de threads | 5 |
+
+### Entorno de Producción
+
+En producción, configura la URL completa de la base de datos usando:
+
+```bash
+DATABASE_URL=postgres://usuario:contraseña@host:5432/nombre_base_datos
+```
 
 ## 🗄️ Estructura del Proyecto
 
@@ -224,6 +273,6 @@ Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más det
 ## 🔍 Soporte
 
 Para soporte, enviar un email a [amogollonr@unal.edu.co]
-=======
-# Factorialhr_Shop_API
->>>>>>> a34fb5c027a353f15e2659ce427c68a436446839
+
+
+
