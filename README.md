@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Factorialhr Shop API
 
 Una API RESTful para una tienda en línea de productos personalizables, inicialmente enfocada en bicicletas pero diseñada para escalar a otros artículos deportivos.
@@ -223,3 +224,6 @@ Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más det
 ## 🔍 Soporte
 
 Para soporte, enviar un email a [amogollonr@unal.edu.co]
+=======
+# Factorialhr_Shop_API
+>>>>>>> a34fb5c027a353f15e2659ce427c68a436446839
