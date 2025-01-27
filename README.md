@@ -54,10 +54,10 @@ docker-compose up -d
 
 5. Crear y configurar la base de datos:
 ```bash
-docker-compose exec api rails db:create db:migrate db:seed
+docker-compose exec api bundle exec rails db:create db:migrate db:seed
 ```
 
-El servidor estará disponible en [http://localhost:3000](http://localhost:3000)
+El servidor estará disponible en [http://127.0.0.1:3000/](http://127.0.0.1:3000/)
 
 ## 📚 Documentación API
 
